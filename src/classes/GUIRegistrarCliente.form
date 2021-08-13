@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="classes.GUIRegistrarCliente">
+  <grid id="27dc6" binding="registrarClientePanel" layout-manager="GridLayoutManager" row-count="12" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="line">
+      <color color="-16777216"/>
+    </border>
+    <children>
+      <component id="e41bf" class="javax.swing.JLabel" binding="nombreLabel">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Lucida Sans Unicode" size="14" style="0"/>
+          <text value="Nombres:"/>
+        </properties>
+      </component>
+      <component id="9fc56" class="javax.swing.JLabel" binding="apellidoLabel">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Lucida Sans Unicode" size="14" style="0"/>
+          <text value="Apellidos:"/>
+        </properties>
+      </component>
+      <component id="ca1e4" class="javax.swing.JLabel" binding="telefonoLabel">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Lucida Sans Unicode" size="14" style="0"/>
+          <text value="Numero de Telefono:"/>
+        </properties>
+      </component>
+      <component id="14668" class="javax.swing.JLabel" binding="mailLabel">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Lucida Sans Unicode" size="14" style="0"/>
+          <text value="E-mail:"/>
+        </properties>
+      </component>
+      <component id="ba8af" class="javax.swing.JLabel" binding="nombreEmpresaLabel">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="193" height="16"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Lucida Sans Unicode" size="14" style="0"/>
+          <text value="Nombre de la Empresa:"/>
+        </properties>
+      </component>
+      <component id="15ba2" class="javax.swing.JLabel" binding="cuilLabel">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Lucida Sans Unicode" size="14" style="0"/>
+          <text value="CUIL:"/>
+        </properties>
+      </component>
+      <component id="34206" class="javax.swing.JTextField" binding="nombreEmpresaTF">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="108" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="6969d" class="javax.swing.JTextField" binding="apellidoTF">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="108" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
+          <toolTipText value="Obligatorio"/>
+        </properties>
+      </component>
+      <component id="44aa8" class="javax.swing.JTextField" binding="nombreTF">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="108" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
+          <toolTipText value="Obligatorio"/>
+        </properties>
+      </component>
+      <component id="3f569" class="javax.swing.JTextField" binding="telefonoTF">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="108" height="30"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="bfc9e" class="javax.swing.JTextField" binding="cuilTF">
+        <constraints>
+          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="108" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="5bdf4" class="javax.swing.JTextField" binding="mailTF">
+        <constraints>
+          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="108" height="30"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="d9075" class="javax.swing.JButton" binding="registrarButton" default-binding="true">
+        <constraints>
+          <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Registrar"/>
+        </properties>
+      </component>
+      <component id="4be39" class="javax.swing.JButton" binding="cancelarButton" default-binding="true">
+        <constraints>
+          <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="108" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Cancelar"/>
+        </properties>
+      </component>
+      <hspacer id="4f221">
+        <constraints>
+          <grid row="10" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="c4fc5">
+        <constraints>
+          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <vspacer id="1e71b">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="82a7">
+        <constraints>
+          <grid row="11" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="76187" class="javax.swing.JLabel" binding="ciudadLabel">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Lucida Sans Unicode" size="14" style="0"/>
+          <text value="Ciudad:"/>
+        </properties>
+      </component>
+      <component id="a8569" class="javax.swing.JLabel" binding="direccionLabel">
+        <constraints>
+          <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Lucida Sans Unicode" size="14" style="0"/>
+          <text value="Dirección:"/>
+        </properties>
+      </component>
+      <vspacer id="c066e">
+        <constraints>
+          <grid row="9" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="11283" class="javax.swing.JTextField" binding="ciudadTF">
+        <constraints>
+          <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="23cb8" class="javax.swing.JTextField" binding="direccionTF">
+        <constraints>
+          <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+    </children>
+  </grid>
+</form>
