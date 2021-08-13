@@ -4,20 +4,29 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.*;
 
-import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
-import static jdk.nashorn.internal.objects.NativeError.printStackTrace;
 //TODO: change jpanel for jframe
 public class GUIRegistrarCliente extends JFrame {
 
-    public GUIRegistrarCliente(String  title) {
+    public GUIRegistrarCliente(String title) {
         buttonListeners();
         initScreen();
         setVisible(true);
     }
 
     public void buttonListeners() {
+        registrarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO pass variables to database, if there's no row avaliable, create one.
+                 if(isUserValid()){
+                     UserRepository.getInstance().addUser(new UserModel(nombreTF.getText(), apellidoTF.getText(), nombreEmpresaTF.getText(),
+                             telefonoTF.getText(), cuilTF.getText(), mailTF.getText(), ciudadTF.getText(), direccionTF.getText()));
+                 }
+                //cleanTextFields();
+            }
+        });
+
         cancelarButton.addActionListener(e -> {
             try {
                 dispose();
@@ -25,20 +34,16 @@ public class GUIRegistrarCliente extends JFrame {
                 exception.printStackTrace();
             }
         });
+    }
 
-        registrarButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //TODO pass variables to database, if there's no row avaliable, create one.
-                try {
-                    insert(id, nombre, apellido, nombreEmpresa, telefono, cuil, mail, ciudad, direccion);
-                    JOptionPane.showMessageDialog(null, "Se ha registrado el cliente.");
-                } catch (SQLException exception) {
-                    printStackTrace(exception);
-                }
-                //cleanTextFields();
-            }
-        });
+    private void initScreen() {
+        this.add(registrarClientePanel);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        this.setMinimumSize(new Dimension(500, 400));
+        this.setMaximumSize(new Dimension(500, 400));
+        this.setResizable(false);
+        this.setUndecorated(true);
+        this.setLocationRelativeTo(null);
     }
 
     private void cleanTextFields() {
@@ -52,41 +57,15 @@ public class GUIRegistrarCliente extends JFrame {
         direccionTF.setText("");
     }
 
-    private void initScreen() {
-this.add(registrarClientePanel);
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        this.setMinimumSize(new Dimension(500, 400));
-        this.setMaximumSize(new Dimension(500, 400));
-        this.setResizable(false);
-        this.setUndecorated(true);
-        this.setLocationRelativeTo(null);
-    }
-
-    private void getText(){
-        nombre = nombreTF.getText();
-        apellido = apellidoTF.getText();
-        nombreEmpresa = nombreEmpresaTF.getText();
-        telefono = telefonoTF.getText();
-        cuil = cuilTF.getText();
-        mail = mailTF.getText();
-        ciudad = ciudadTF.getText();
-        direccion = direccionTF.getText();
-    }
-
-    public void insert(int id, String nombre, String apellido, String nombreEmpresa, String telefono,
-                       String cuil, String mail, String ciudad, String direccion) throws SQLException {
-        id = 1;
-        getText();
-        if (nombre != null || apellido != null) {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/facturando", "root", "");
-            Statement statement = connection.createStatement();
-            statement.executeUpdate("INSERT INTO clientes(ID, nombres, apellidos, nombreEmpresa, numeroTelefono, cuil, email," +
-                    "ciudad, direccion) VALUES('"+id+"','"+nombre+"','"+apellido+"','"+nombreEmpresa+"','"+telefono+"','"+cuil+"" +
-                    "','"+mail+"','"+ciudad+"','"+direccion+")");
-                    id++;
-        } else {
-            JOptionPane.showMessageDialog(null, "El nombre y el apellido son obligatorios");
-        }
+    public boolean isUserValid(){
+      if(nombreTF.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "El nombre es obligatorio");
+            return false;
+        } else if(apellidoTF.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "El apellido es obligatorio");
+          return false;
+      }
+        return true;
     }
 
     //Var Declaration
@@ -100,14 +79,6 @@ this.add(registrarClientePanel);
     private JTextField mailTF;
     private JTextField ciudadTF;
     private JTextField direccionTF;
-    private String nombre;
-    private String apellido;
-    private String nombreEmpresa;
-    private String telefono;
-    private String cuil;
-    private String mail;
-    private String ciudad;
-    private String direccion;
     private JButton registrarButton;
     private JButton cancelarButton;
     private JLabel nombreLabel;
@@ -120,3 +91,4 @@ this.add(registrarClientePanel);
     private JLabel direccionLabel;
     private JTable table;
 }
+

@@ -36,28 +36,24 @@ public class GUImain extends JFrame implements MainFrameCallback {
     @Override
     public void consultaFacturasMIActionPerformed(ActionEvent e) {
         GUIconsultaFacturas consultasFactura = new GUIconsultaFacturas("Consulta Facturas");
-        f.add(consultasFactura);
         consultasFactura.setVisible(true);
     }
 
     @Override
     public void consultaCajaMIActionPerformed(ActionEvent e) {
         GUIconsultaCaja consultasCaja = new GUIconsultaCaja("Consulta Cajas por Fecha");
-        f.add(consultasCaja);
         consultasCaja.setVisible(true);
     }
 
     @Override
     public void listaProveedoresMIActionPerformed(ActionEvent e) {
         GUIListaProveedores listaProveedores = new GUIListaProveedores("Lista de Proveedores");
-        f.add(listaProveedores);
         listaProveedores.setVisible(true);
     }
 
     @Override
     public void registrarProveedorMIActionPerformed(ActionEvent e) {
         GUIRegistrarProveedor registrarProveedor = new GUIRegistrarProveedor("Registrar Proveedor");
-        f.add(registrarProveedor);
         registrarProveedor.setVisible(true);
     }
 
@@ -75,35 +71,30 @@ public class GUImain extends JFrame implements MainFrameCallback {
     @Override
     public void nuevaVentaMIActionPerformed(ActionEvent e) {
         GUINuevaVenta nuevaVenta = new GUINuevaVenta("Nueva Venta");
-        f.add(nuevaVenta);
         nuevaVenta.setVisible(true);
     }
 
     @Override
     public void listaProductosMIActionPerformed(ActionEvent e) {
         GUIListaProductos listaProductos = new GUIListaProductos("Lista de Productos");
-        f.add(listaProductos);
         listaProductos.setVisible(true);
     }
 
     @Override
     public void registrarProductoMIACtionPerformed(ActionEvent e) {
         GUIRegistrarProducto registrarProducto = new GUIRegistrarProducto("Registrar Producto");
-        f.add(registrarProducto);
         registrarProducto.setVisible(true);
     }
 
     @Override
     public void listaClientesMIActionPerformed(ActionEvent e) {
         GUIListaClientes listaClientes = new GUIListaClientes("Lista de Clientes");
-        f.add(listaClientes);
         listaClientes.setVisible(true);
     }
 
     @Override
     public void registrarClienteMIActionPerformed(ActionEvent e) {
         GUIRegistrarCliente registrarCliente = new GUIRegistrarCliente("Registrar Cliente");
-        f.add(registrarCliente);
         registrarCliente.setVisible(true);
     }
 }
